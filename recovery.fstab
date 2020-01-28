@@ -61,6 +61,6 @@
 /dtbo             emmc     /dev/block/bootdevice/by-name/dtbo         flags=display="dtbo";backup=1;flashimg=1
 
 # Removable storage
-/usb-otg          auto     /dev/block/sda1         /dev/block/sda     flags=display="USB OTG";storage;removable;wipeingui
+/usb_otg          auto     /dev/block/sda1         /dev/block/sda     flags=display="USB OTG";storage;removable;wipeingui
 /external_sd      auto     /dev/block/mmcblk1p1                       flags=display="External SD";storage;removable;wipeingui
      
