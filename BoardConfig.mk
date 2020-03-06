@@ -28,8 +28,8 @@ BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET := 0x01000000
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 
-TARGET_PREBUILT_KERNEL := device/Xiaomi/pine/kernel
-TARGET_RECOVERY_FSTAB := device/Xiaomi/pine/recovery.fstab
+TARGET_PREBUILT_KERNEL := device/xiaomi/pine/kernel
+TARGET_RECOVERY_FSTAB := device/xiaomi/pine/recovery.fstab
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
 # TWRP
@@ -55,9 +55,53 @@ TARGET_RECOVERY_QCOM_RTC_FIX := true
 # Recovery
 TARGET_USERIMAGES_USE_EXT4 := true
 
+# System as root
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+
 # Android Verified Boot
 BOARD_AVB_ENABLE := false
 BOARD_BUILD_DISABLED_VBMETAIMAGE := true
+
+
+#
+# SHRP SPECIFIC FLAGS (start!)
+# 
+
+SHRP_PATH := device/xiaomi/pine
+
+# Maintainer name
+SHRP_MAINTAINER := AOiSPdev
+
+SHRP_DEVICE_CODE := pine
+SHRP_EDL_MODE := 1
+SHRP_EXTERNAL := /external_sd
+SHRP_INTERNAL := /sdcard
+SHRP_OTG := /usb_otg
+SHRP_FLASH := 1
+
+# These are led paths, find yours then put here (Optional)
+#SHRP_FONP_1 := /sys/class/leds/led:torch_0/brightness
+#SHRP_FONP_2 := /sys/class/leds/led:torch_1/brightness
+#SHRP_FONP_3 := /sys/class/leds/led:switch/brightness
+
+SHRP_FLASH_MAX_BRIGHTNESS := 250
+SHRP_REC := /dev/block/bootdevice/by-name/recovery
+SHRP_AB := true
+
+# Recovery Type (It can be treble,normal,SAR) [Only for About Section]
+SHRP_REC_TYPE := SAR
+
+# Recovery Type [Only for About Section]
+SHRP_DEVICE_TYPE := A/B
+
+# SHRP Padding Flag (Only for rounded corner devices.)
+#SHRP_STATUSBAR_RIGHT_PADDING := 40
+#SHRP_STATUSBAR_LEFT_PADDING := 40
+
+#
+# SHRP SPECIFIC FLAGS (end!)
+#
+
 
 # Encryption
 PLATFORM_SDK_VERSION := 28
