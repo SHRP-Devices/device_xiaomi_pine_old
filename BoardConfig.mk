@@ -56,7 +56,7 @@ TARGET_RECOVERY_QCOM_RTC_FIX := true
 TARGET_USERIMAGES_USE_EXT4 := true
 
 # System as root
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+#BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
 # Android Verified Boot
 BOARD_AVB_ENABLE := false
@@ -89,7 +89,7 @@ SHRP_REC := /dev/block/bootdevice/by-name/recovery
 SHRP_AB := true
 
 # Recovery Type (It can be treble,normal,SAR) [Only for About Section]
-SHRP_REC_TYPE := SAR
+SHRP_REC_TYPE := treble
 
 # Recovery Type [Only for About Section]
 SHRP_DEVICE_TYPE := A/B
