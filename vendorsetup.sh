@@ -15,3 +15,5 @@
 #
 
 add_lunch_combo omni_pine-eng
+add_lunch_combo omni_pine-userdebug
+add_lunch_combo omni_pine-user
