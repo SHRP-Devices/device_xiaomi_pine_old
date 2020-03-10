@@ -86,13 +86,12 @@ SHRP_FLASH := 1
 
 SHRP_FLASH_MAX_BRIGHTNESS := 250
 SHRP_REC := /dev/block/bootdevice/by-name/recovery
-SHRP_AB := true
 
 # Recovery Type (It can be treble,normal,SAR) [Only for About Section]
 SHRP_REC_TYPE := treble
 
 # Recovery Type [Only for About Section]
-SHRP_DEVICE_TYPE := A/B
+SHRP_DEVICE_TYPE := A_only
 
 # SHRP Padding Flag (Only for rounded corner devices.)
 #SHRP_STATUSBAR_RIGHT_PADDING := 40
