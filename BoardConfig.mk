@@ -44,6 +44,7 @@ TW_EXTRA_LANGUAGES := false
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 TW_HAS_EDL_MODE := true
+TW_SKIP_COMPATIBILITY_CHECK := true
 
 RECOVERY_SDCARD_ON_DATA := true
 BOARD_HAS_NO_REAL_SDCARD := true
@@ -65,37 +66,20 @@ BOARD_BUILD_DISABLED_VBMETAIMAGE := true
 
 #
 # SHRP SPECIFIC FLAGS (start!)
-# 
+#
 
 SHRP_PATH := device/xiaomi/pine
-
-# Maintainer name
 SHRP_MAINTAINER := AOiSPdev
-
 SHRP_DEVICE_CODE := pine
 SHRP_EDL_MODE := 1
 SHRP_EXTERNAL := /external_sd
 SHRP_INTERNAL := /sdcard
 SHRP_OTG := /usb_otg
 SHRP_FLASH := 1
-
-# These are led paths, find yours then put here (Optional)
-#SHRP_FONP_1 := /sys/class/leds/led:torch_0/brightness
-#SHRP_FONP_2 := /sys/class/leds/led:torch_1/brightness
-#SHRP_FONP_3 := /sys/class/leds/led:switch/brightness
-
 SHRP_FLASH_MAX_BRIGHTNESS := 250
 SHRP_REC := /dev/block/bootdevice/by-name/recovery
-
-# Recovery Type (It can be treble,normal,SAR) [Only for About Section]
 SHRP_REC_TYPE := SAR
-
-# Recovery Type [Only for About Section]
 SHRP_DEVICE_TYPE := A_Only
-
-# SHRP Padding Flag (Only for rounded corner devices.)
-#SHRP_STATUSBAR_RIGHT_PADDING := 40
-#SHRP_STATUSBAR_LEFT_PADDING := 40
 
 #
 # SHRP SPECIFIC FLAGS (end!)
